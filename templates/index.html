@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% include 'header.html' %}
+    <section class="hero">
+        <h1>Experience the Essence of Portugal</h1>
+        <p>Authentic Crafts, Traditional Techniques</p>
+        <button>Shop Now</button>
+    </section>
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-carousel">
+            <!-- Insert product items here -->
+        </div>
+    </section>
+    <section class="about-teaser">
+        <h2>About Us</h2>
+        <p>{% include 'about-short.txt' %}</p>
+        <button>Learn More</button>
+    </section>
+    <section class="sustainability">
+        <h2>Sustainable Practices</h2>
+        <!-- Icons and brief descriptions -->
+    </section>
+    {% include 'reviews.html' %}
+    {% include 'footer.html' %}
+
+{% endblock %}

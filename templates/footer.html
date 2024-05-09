@@ -1,0 +1,31 @@
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>About Us</h4>
+            <p>{% include 'about-short.txt' %}</p>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>Phone: {% include "phone.txt" %}</p>
+            <p>Email: {% include "email.txt" %}</p>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <a href="https://facebook.com"><img src="{{ url_for('static', filename='img/facebook-logo.png') }}"
+                                                alt="Facebook"/></a>
+            <a href="https://twitter.com"><img src="{{ url_for('static', filename='img/twitter-logo.png') }}"
+                                               alt="Twitter"/></a>
+            <a href="https://instagram.com"><img src="{{ url_for('static', filename='img/instagram-logo.png') }}"
+                                                 alt="Instagram"/></a>
+        </div>
+    </div>
+</footer>

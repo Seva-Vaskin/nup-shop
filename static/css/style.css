@@ -1,0 +1,231 @@
+/* General body styling */
+body {
+    margin: 0;
+    font-size: 1vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header and navigation styling */
+header nav {
+    background-color: #FFE773;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7vw 0.7vw;
+}
+
+.header-title {
+    color: #333;
+    margin-left: 0.2vw;
+    margin-top: 2.5vw;
+    font-size: 2.5vw;
+    font-weight: bold; /* Makes the font bold */
+    letter-spacing: 0.1vw; /* Adds spacing between letters for better readability */
+}
+
+.logo img {
+    margin-left: 0.2vw;
+    align-items: center;
+    height: 5vw;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 0.5vw;
+    font-size: 1.2vw;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #556677;
+}
+
+.cart img {
+    height: 2vw;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 2vw;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the footer content */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px; /* Minimum width for each section */
+    margin: 0.2vw;
+}
+
+.footer-section h4 {
+    color: #ff9900; /* Theme color for headings */
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ff9900; /* Hover effect */
+}
+
+.footer-section a img {
+    height: 2vw; /* Social media icons size */
+    margin: 0.2vw;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        flex: none;
+        max-width: 300px;
+    }
+}
+
+.contact {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 1.5vw;
+    border-radius: 0.5vw;
+    box-shadow: 0 0.25vw 0.5vw rgba(0, 0, 0, 0.1);
+    max-width: 60vw;
+    margin: 1vw auto;
+}
+
+.contact h2, .contact h3 {
+    color: #333;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    padding: 0.5vw 0;
+    line-height: 1.6;
+}
+
+.contact-info a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-form form {
+    background-color: #fff;
+    padding: 1.5vw;
+    border-radius: 0.5vw;
+    box-shadow: 0 0.1vw 0.25vw rgba(0, 0, 0, 0.05);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 1vw;
+    color: #666;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 1vw;
+    margin-bottom: 1.5vw;
+    border: 0.1vw solid #ccc;
+    border-radius: 0.2vw;
+}
+
+.contact-form button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 0.8vw 1.5vw;
+    border-radius: 0.2vw;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #003d7a;
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 2.5vw;
+    }
+}
+
+.reviews-container {
+    font-family: Arial, sans-serif;
+    padding: 2vw;
+    max-width: 80vw;
+    margin: 2vw auto;
+    background-color: #f9f9f9;
+    border-radius: 1vw;
+    box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.1);
+}
+
+.reviews-container h2 {
+    color: #333;
+    text-align: center;
+}
+
+.review {
+    padding: 1.5vw;
+    border-bottom: 0.1vw solid #ccc;
+}
+
+.review:last-child {
+    border-bottom: none; /* Remove bottom border from the last review */
+}
+
+.review-text {
+    color: #555;
+    font-size: 1.2vw;
+    line-height: 1.8;
+}
+
+.review-author {
+    font-size: 1vw;
+    color: #888;
+    text-align: right;
+    margin-top: 1vw;
+}
+
