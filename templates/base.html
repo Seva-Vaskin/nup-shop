@@ -10,8 +10,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-{% block content %}
-    There should be a content of the page
-{% endblock %}
+<div class="content-wrapper">
+    {% include 'header.html' %}
+    <main>
+        {% block content %}
+            There should be a content of the page
+        {% endblock %}
+    </main>
+    <div class="flexible-space"></div> <!-- This div will take up any remaining space -->
+</div>
+{% include 'footer.html' %}
+
 </body>
 </html>

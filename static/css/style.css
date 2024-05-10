@@ -63,7 +63,9 @@ footer {
     font-family: Arial, sans-serif;
     padding: 20px;
     text-align: center;
+    width: 100%;
 }
+
 
 .footer-container {
     display: flex;
@@ -125,6 +127,16 @@ footer {
     .footer-section {
         max-width: 300px;
     }
+}
+
+.about {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0.25vw 0.5vw rgba(0, 0, 0, 0.1);
+    max-width: 60vw;
+    margin: 10px auto;
 }
 
 .contact {
@@ -238,4 +250,104 @@ footer {
     color: #888;
     text-align: right;
     margin-top: 10px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product {
+    flex-basis: 100%; /* Full width on small screens */
+    max-width: 300px; /* Max width for standardization */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.product-image {
+    width: 100%; /* Ensure standard size */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensure images cover the area nicely */
+    border-radius: 5px;
+}
+
+.product-title {
+    color: #333;
+    font-size: 1.5em;
+}
+
+.product-description {
+    font-size: 0.9em;
+    color: #666;
+    margin: 10px 0;
+    height: 60px; /* Fixed height to truncate long descriptions */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis to text that overflows */
+}
+
+.product-price {
+    font-weight: bold;
+    color: #2a9d8f;
+}
+
+.product-rating {
+    color: #DDC551;
+    margin-bottom: 15px;
+}
+
+.add-to-cart-button, .product-page-button {
+    background-color: #FFE773; /* Matching the header color */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover, .product-page-button:hover {
+    background-color: #ffcc42; /* Lighter shade for hover effect */
+}
+
+.quantity-input {
+    width: 50px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 768px) {
+    .product {
+        flex-basis: 30%; /* Allow three items per row on desktop */
+    }
+}
+
+.star {
+    color: gold; /* Gold color for stars */
+    font-size: 1.2em;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack the children vertically */
+    min-height: 100vh; /* Minimum height is full viewport height */
+}
+
+.flexible-space {
+    flex-grow: 1; /* Allows this div to take up any leftover space */
 }
