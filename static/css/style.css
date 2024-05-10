@@ -1,7 +1,7 @@
 /* General body styling */
 body {
     margin: 0;
-    font-size: 1vw;
+    font-size: 16px; /* Base font size */
     font-family: 'Roboto', sans-serif;
 }
 
@@ -12,22 +12,22 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.7vw 0.7vw;
+    padding: 10px;
 }
 
 .header-title {
     color: #333;
-    margin-left: 0.2vw;
-    margin-top: 2.5vw;
-    font-size: 2.5vw;
-    font-weight: bold; /* Makes the font bold */
-    letter-spacing: 0.1vw; /* Adds spacing between letters for better readability */
+    margin-left: 5px;
+    margin-top: 20px;
+    font-size: 1.5rem; /* Responsive font size for desktops */
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .logo img {
-    margin-left: 0.2vw;
+    margin-left: 5px;
     align-items: center;
-    height: 5vw;
+    height: 50px; /* Fixed height for logo */
 }
 
 .nav-links {
@@ -39,8 +39,8 @@ header nav {
 }
 
 .nav-links li {
-    margin: 0 0.5vw;
-    font-size: 1.2vw;
+    margin: 0 10px;
+    font-size: 1rem;
 }
 
 .nav-links a {
@@ -54,34 +54,33 @@ header nav {
 }
 
 .cart img {
-    height: 2vw;
+    height: 40px; /* Fixed height for cart icon */
 }
-
 
 footer {
     background-color: #333;
     color: white;
     font-family: Arial, sans-serif;
-    padding: 2vw;
+    padding: 20px;
     text-align: center;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Ensures responsiveness */
+    flex-wrap: wrap;
     max-width: 1200px;
-    margin: 0 auto; /* Centers the footer content */
+    margin: 0 auto;
 }
 
 .footer-section {
     flex: 1;
-    min-width: 200px; /* Minimum width for each section */
-    margin: 0.2vw;
+    min-width: 200px;
+    margin: 5px;
 }
 
 .footer-section h4 {
-    color: #ff9900; /* Theme color for headings */
+    color: #ff9900;
 }
 
 .footer-section ul {
@@ -96,22 +95,34 @@ footer {
 }
 
 .footer-section ul li a:hover {
-    color: #ff9900; /* Hover effect */
+    color: #ff9900;
 }
 
 .footer-section a img {
-    height: 2vw; /* Social media icons size */
-    margin: 0.2vw;
+    height: 40px; /* Adjusted image size */
+    margin: 5px;
 }
 
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Smaller base font size for mobile */
+    }
+
+    .header-title {
+        font-size: 1.2rem; /* Adjusted for better visibility on mobile */
+    }
+
+    .nav-links li {
+        font-size: 0.9rem;
+    }
+
     .footer-container {
         flex-direction: column;
         align-items: center;
     }
 
     .footer-section {
-        flex: none;
         max-width: 300px;
     }
 }
@@ -119,11 +130,11 @@ footer {
 .contact {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    padding: 1.5vw;
-    border-radius: 0.5vw;
+    padding: 20px;
+    border-radius: 5px;
     box-shadow: 0 0.25vw 0.5vw rgba(0, 0, 0, 0.1);
     max-width: 60vw;
-    margin: 1vw auto;
+    margin: 10px auto;
 }
 
 .contact h2, .contact h3 {
@@ -136,7 +147,7 @@ footer {
 }
 
 .contact-info li {
-    padding: 0.5vw 0;
+    padding: 10px 0;
     line-height: 1.6;
 }
 
@@ -151,14 +162,14 @@ footer {
 
 .contact-form form {
     background-color: #fff;
-    padding: 1.5vw;
-    border-radius: 0.5vw;
+    padding: 20px;
+    border-radius: 5px;
     box-shadow: 0 0.1vw 0.25vw rgba(0, 0, 0, 0.05);
 }
 
 .contact-form label {
     display: block;
-    margin-bottom: 1vw;
+    margin-bottom: 10px;
     color: #666;
 }
 
@@ -166,18 +177,18 @@ footer {
 .contact-form input[type="email"],
 .contact-form textarea {
     width: 100%;
-    padding: 1vw;
-    margin-bottom: 1.5vw;
-    border: 0.1vw solid #ccc;
-    border-radius: 0.2vw;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
 }
 
 .contact-form button {
     background-color: #0056b3;
     color: white;
     border: none;
-    padding: 0.8vw 1.5vw;
-    border-radius: 0.2vw;
+    padding: 8px 15px;
+    border-radius: 2px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -188,17 +199,17 @@ footer {
 
 @media (max-width: 768px) {
     .contact {
-        padding: 2.5vw;
+        padding: 25px;
     }
 }
 
 .reviews-container {
     font-family: Arial, sans-serif;
-    padding: 2vw;
+    padding: 20px;
     max-width: 80vw;
-    margin: 2vw auto;
+    margin: 20px auto;
     background-color: #f9f9f9;
-    border-radius: 1vw;
+    border-radius: 10px;
     box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.1);
 }
 
@@ -208,24 +219,23 @@ footer {
 }
 
 .review {
-    padding: 1.5vw;
-    border-bottom: 0.1vw solid #ccc;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
 }
 
 .review:last-child {
-    border-bottom: none; /* Remove bottom border from the last review */
+    border-bottom: none;
 }
 
 .review-text {
     color: #555;
-    font-size: 1.2vw;
+    font-size: 1rem;
     line-height: 1.8;
 }
 
 .review-author {
-    font-size: 1vw;
+    font-size: 0.8rem;
     color: #888;
     text-align: right;
-    margin-top: 1vw;
+    margin-top: 10px;
 }
-
