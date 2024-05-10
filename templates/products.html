@@ -1,15 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Welcome to Our Shop</h1>
     <div class="products">
         {% for item in products %}
             <div class="product">
                 <img src="{{ item.image }}" alt="{{ item.title }}" class="product-image">
-                <h2 class="product-title">{{ item.title }}</h2>
-                <p class="product-description">{{ item.description | truncate(100) }}</p>
-                <p class="product-price">Price: €{{ item.price }}</p>
-                <div class="product-rating">
+                <h2 class="product-title-short">{{ item.title }}</h2>
+                <p class="product-description-short">{{ item.description | truncate(100) }}</p>
+                <p class="product-price-short">Price: €{{ item.price }}</p>
+                <div class="product-rating-short">
                     {% set full_stars = item.rating | int %}
                     {% set half_star = item.rating - full_stars >= 0.5 %}
                     {% for i in range(full_stars) %}

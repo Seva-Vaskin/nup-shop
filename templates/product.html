@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="product-detail-container">
+    <div class="product-image-container">
+        <img src="{{ product.image }}" alt="{{ product.title }}" class="product-detail-image">
+    </div>
+    <div class="product-info">
+        <h1 class="product-title">{{ product.title }}</h1>
+        <div class="product-rating">
+            {% set full_stars = product.rating | int %}
+            {% for i in range(full_stars) %}
+                <span class="star">&#9733;</span>
+            {% endfor %}
+            {% if product.rating - full_stars >= 0.5 %}
+                <span class="star">&#9734;</span>
+            {% endif %}
+            <span class="rating-number">({{ product.rating }})</span>
+        </div>
+        <p class="product-price">Price: €{{ product.price }}</p>
+        <div class="add-to-cart">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" class="quantity-input">
+            <button type="button" class="add-to-cart-button">Add to Cart</button>
+        </div>
+        <p class="product-description">{{ product.description }}</p>
+    </div>
+</div>
+{% endblock %}

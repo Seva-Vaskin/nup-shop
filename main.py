@@ -1,7 +1,7 @@
 import csv
 from pathlib import Path
 
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, abort
 from flask_app_creator import FlaskAppCreator
 
 app = FlaskAppCreator.create()
@@ -24,6 +24,14 @@ def read_products():
     return items
 
 
+@app.route('/product/<int:product_id>')
+def product(product_id):
+    items = read_products()
+    if product_id <= 0 or product_id > len(items):
+        abort(404)
+    return render_template('product.html', product=items[product_id - 1])
+
+
 @app.route("/", methods=['GET', 'POST'])
 def index():
     return render_template('index.html')
@@ -41,8 +49,8 @@ def contact():
 
 @app.route("/products", methods=['GET', 'POST'])
 def products():
-    products = read_products()
-    return render_template('products.html', products=products)
+    items = read_products()
+    return render_template('products.html', products=items)
 
 
 if __name__ == '__main__':
