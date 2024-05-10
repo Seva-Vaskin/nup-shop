@@ -1,19 +1,61 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.querySelector('.product-carousel');
+            let currentIndex = 0;
+
+            document.querySelector('.prev-btn').addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+
+            document.querySelector('.next-btn').addEventListener('click', () => {
+                if (currentIndex < carousel.children.length - 1) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+
+            function updateCarousel() {
+                const offset = -currentIndex * 100; // Assuming each item is 100% of the carousel width
+                carousel.style.transform = `translateX(${offset}%)`;
+            }
+        });
+    </script>
+
+
     <section class="featured-products">
         <h2>Featured Products</h2>
-        <div class="product-carousel">
-            <!-- Insert product items here -->
+        <div class="carousel-container">
+            <button class="carousel-btn prev-btn">&#10094;</button>
+            <div class="product-carousel">
+                {% for product in products %}
+                    <div class="product-item">
+                        <img src="{{ product.image }}" alt="{{ product.title }}">
+                        {#                        <h3>{{ product.title }}</h3>#}
+                        <h3><a onclick="window.location.href='/product/{{ loop.index }}'">{{ product.title }}</a></h3>
+
+                        <p>€{{ product.price }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+            <button class="carousel-btn next-btn">&#10095;</button>
         </div>
+
+        <button class="add-to-cart-button" onclick="window.location.href='/products'">See All Products</button>
     </section>
 
     {% include 'reviews.html' %}
 
-    <section class="about-teaser">
+    <div class="reviews-container">
         <h2>About Us</h2>
-        <p>{% include 'about-short.txt' %}</p>
-        <button>Learn More</button>
-    </section>
-
+        <div class="review">
+            <p>{% include 'about-short.txt' %} <a href="/about">Learn more...</a></p>
+        </div>
+    </div>
 {% endblock %}

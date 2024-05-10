@@ -410,16 +410,76 @@ html, body {
     margin-top: 20px;
 }
 
-/*.add-to-cart {*/
-/*    margin-top: 20px;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*}*/
+.featured-products {
+    text-align: center;
+    margin: 20px;
+}
 
-/*.quantity-input {*/
-/*    width: 60px;*/
-/*    margin-right: 15px;*/
-/*    padding: 5px;*/
-/*    border: 1px solid #ccc;*/
-/*}*/
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto;
+    width: 80%;
+}
 
+.product-carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform; /* Optimize performance for animations */
+}
+
+.product-item {
+    min-width: 100%; /* Each item takes full width of the carousel container */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 100;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.see-all-btn {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.see-all-btn:hover {
+    background-color: #e2e2e2;
+}
+
+.product-carousel .product-item img {
+    width: 300px;  // Set your desired width
+    height: 200px; // Set your desired height
+    object-fit: cover;  // This will cover the area without distorting the aspect ratio but will crop the image if necessary
+}
+
+.product-item h3 {
+    color: inherit; /* Make the color the same as the parent element */
+    text-decoration: none; /* Remove underline */
+}
+
+.product-item h3:hover {
+    color: #ff9900;
+    text-decoration: underline; /* Optional: add underline on hover */
+    cursor: pointer;
+}

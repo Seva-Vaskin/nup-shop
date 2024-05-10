@@ -34,7 +34,8 @@ def product(product_id):
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
-    return render_template('index.html')
+    items = read_products()[:10]
+    return render_template('index.html', products=items)
 
 
 @app.route("/about", methods=['GET', 'POST'])
